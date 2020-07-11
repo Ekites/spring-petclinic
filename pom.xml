@@ -32,7 +32,7 @@
     <spring-format.version>0.0.22</spring-format.version>
 	
 	<!--=- Quality Gate properties -= -->
-		<sonar.host.url>http://192.168.43.35:9000</sonar.host.url>
+		<sonar.host.url>http://localhost:9000</sonar.host.url>
 		<sonar.login>e61c46a0d6e269b56b0a94c5331a43a1966609e9</sonar.login>
 		<sonar.projectVersion>${project.version}</sonar.projectVersion>
 		<sonar.language>java</sonar.language>
