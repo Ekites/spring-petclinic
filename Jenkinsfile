@@ -30,7 +30,7 @@ pipeline {
         stage('Compile') {
             steps {
                 echo "-=- compiling project -=-"
-                sh "./mvnw clean compile"
+                sh './mvnw clean compile'
             }
         }
 
