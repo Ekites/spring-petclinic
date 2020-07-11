@@ -27,10 +27,10 @@ pipeline {
             }
         }
 
-        stage('Compile') {
+        stage('Package') {
             steps {
                 echo "-=- compiling project -=-"
- //               sh './mvnw clean compile'
+				sh './mvnw clean package '
             }
         }
 
