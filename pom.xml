@@ -35,15 +35,7 @@
 		<sonar.host.url>http://192.168.43.35:9000</sonar.host.url>
 		<sonar.login>e61c46a0d6e269b56b0a94c5331a43a1966609e9</sonar.login>
 		<sonar.projectVersion>${project.version}</sonar.projectVersion>
-		<!-- Some properties that will be inherited by the modules -->
-		<sonar.projectBaseDir>.</sonar.projectBaseDir>
-		<sonar.inclusion>src/main/**</sonar.inclusion>
-		<sonar.test.inclusions>src/test/**</sonar.test.inclusions>
 		<sonar.language>java</sonar.language>
-		<sonar.binaries>${project.build.outputDirectory}</sonar.binaries>
-		<sonar.junit.reportsPath>${project.build.directory}/surefire-reports</sonar.junit.reportsPath>
-		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
-		<sonar.jacoco.reportPath>${jacoco.utExec}</sonar.jacoco.reportPath>
   </properties>
 
   <dependencies>
