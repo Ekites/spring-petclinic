@@ -30,7 +30,7 @@ pipeline {
         stage('Compile') {
             steps {
                 echo "-=- compiling project -=-"
-                sh './mvnw clean compile'
+ //               sh './mvnw clean compile'
             }
         }
 
@@ -38,7 +38,7 @@ pipeline {
         
             steps {
                 echo "-=- run code inspection -=-"
-                withSonarQubeEnv('ci-sonarqube') {
+                withSonarQubeEnv('SonarQube') {
 					sh './mvnw sonar:sonar'
                 }
             }

@@ -30,6 +30,20 @@
     <jacoco.version>0.8.5</jacoco.version>
     <nohttp-checkstyle.version>0.0.4.RELEASE</nohttp-checkstyle.version>
     <spring-format.version>0.0.22</spring-format.version>
+	
+	<!--=- Quality Gate properties -= -->
+		<sonar.host.url>http://192.168.43.35:9000</sonar.host.url>
+		<sonar.login>955765f5ef8c47708c8b8f00a6b55cd4</sonar.login>
+		<sonar.projectVersion>${project.version}</sonar.projectVersion>
+		<!-- Some properties that will be inherited by the modules -->
+		<sonar.projectBaseDir>.</sonar.projectBaseDir>
+		<sonar.inclusion>src/main/**</sonar.inclusion>
+		<sonar.test.inclusions>src/test/**</sonar.test.inclusions>
+		<sonar.language>java</sonar.language>
+		<sonar.binaries>${project.build.outputDirectory}</sonar.binaries>
+		<sonar.junit.reportsPath>${project.build.directory}/surefire-reports</sonar.junit.reportsPath>
+		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+		<sonar.jacoco.reportPath>${jacoco.utExec}</sonar.jacoco.reportPath>
   </properties>
 
   <dependencies>
