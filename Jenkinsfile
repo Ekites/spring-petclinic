@@ -50,15 +50,6 @@ pipeline {
             echo "-=- One way or another, finished -=-"
             echo "-=- ${currentBuild.currentResult}: Job ${JOB_NAME}(${BUILD_NUMBER}) -=-"
         }
-        unstable {
-        	deleteDir() 
-        }
-        failure {
-        	deleteDir()
-        }
-        changed {
-        	deleteDir()
-        }
     }
 
 }
