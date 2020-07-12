@@ -40,41 +40,6 @@ pipeline {
                 echo "-=- run code inspection -=-"
                 withSonarQubeEnv('SonarQube') {
 					sh './mvnw sonar:sonar'
-					sonarToGerrit (
-		inspectionConfig: [
-			serverURL: 'http://localhost:9000',
-		    baseConfig: [
-				projectPath: '',
-				sonarReportPath: 'target/sonar/sonar-report.json',
-				autoMatch: true
-			]
-		],
-        reviewConfig: [ 
-            issueFilterConfig: [
-                severity: 'INFO', 
-                newIssuesOnly: false, 
-                changedLinesOnly: false
-                ], 
-            noIssuesTitleTemplate: 'SonarQube violations have not been found.', 
-            someIssuesTitleTemplate: '<total_count> SonarQube violations have been found.',
-            issueCommentTemplate: '<severity> SonarQube violation:\n\n\n<message>\n\n\nRead more: <rule_url>'
-        ],
-        scoreConfig: [ 
-            issueFilterConfig: [
-                severity: 'INFO', 
-                newIssuesOnly: false, 
-                changedLinesOnly: false
-                ], 
-            category: 'Code-Review', 
-            noIssuesScore: 0,
-            issuesScore: -1
-        ],
-		notificationConfig: [
-			noIssuesNotificationRecipient: 'NONE',
-			commentedIssuesNotificationRecipient: 'OWNER',
-			negativeScoreNotificationRecipient: 'OWNER'
-		]
-    )
                 }
             }
         }

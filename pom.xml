@@ -33,9 +33,10 @@
 	
 	<!--=- Quality Gate properties -= -->
 		<sonar.host.url>http://localhost:9000</sonar.host.url>
-		<sonar.login>e61c46a0d6e269b56b0a94c5331a43a1966609e9</sonar.login>
+		<sonar.login>9136d249df5c564c01d5a329d1b9508d5374808a</sonar.login>
 		<sonar.projectVersion>${project.version}</sonar.projectVersion>
 		<sonar.language>java</sonar.language>
+		<sonar.analysis.mode>preview</sonar.analysis.mode>
 		<sonar.report.export.path>sonar-report.json</sonar.report.export.path>
   </properties>
 
