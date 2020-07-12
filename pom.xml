@@ -36,6 +36,7 @@
 		<sonar.login>e61c46a0d6e269b56b0a94c5331a43a1966609e9</sonar.login>
 		<sonar.projectVersion>${project.version}</sonar.projectVersion>
 		<sonar.language>java</sonar.language>
+		<sonar.report.export.path>sonar-report.json</sonar.report.export.path>
   </properties>
 
   <dependencies>
